@@ -33,9 +33,15 @@ app.post("/new", bodyParser.json(), (req, res) => {
     let title = req.body.title;
     let description = req.body.title;
 
+    //Gerar id
     function generateID() {
-        return Math.random().toString(36).substr(2,9);
+        return Math.random().toString(36).substr(2, 9);
     }
+
+    //Adcionar posts no array
+    post.push(id, title, description);
+
+    res.send("Post criado")
 
 })
 
