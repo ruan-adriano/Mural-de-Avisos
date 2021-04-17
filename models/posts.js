@@ -15,6 +15,10 @@ module.exports = {
         this.posts.push({ id: generateID(), title: title, description: description });
     },
 
+    deletePost(id){
+        this.posts.pop(id)
+    },
+
 }
 
 //Gerar id
