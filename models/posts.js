@@ -3,7 +3,7 @@ module.exports = {
         {
             id: "dfjksdf",
             title: "Teste de títiulo",
-            descrption: "Teste de descrição"
+            description: "Teste de descrição"
         },
     ],
 
@@ -13,10 +13,6 @@ module.exports = {
 
     newPost(title, description) {
         this.posts.push({ id: generateID(), title: title, description: description });
-    },
-
-    deletePost(id){
-        this.posts.pop(id)
     },
 
 }
