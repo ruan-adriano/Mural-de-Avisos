@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function updatePosts() {
-    fetch("http://localhost:5000/api/all").then(res => {
+    fetch("http://192.168.0.101:5000/api/all").then(res => {
         return res.json();
     }).then(json => {
         console.log(json);
@@ -34,7 +34,7 @@ function newPost() {
         headers: new Headers({"content-type":"application/json"}),
         body: JSON.stringify(post)
     }
-    fetch("http://localhost:5000/api/new", options).then(res => {
+    fetch("http://192.168.0.101:5000/api/new", options).then(res => {
         console.log(res);
         updatePosts();
         document.getElementById("title").value = "";
